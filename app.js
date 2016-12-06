@@ -4,4 +4,10 @@ let billData = [
   { name: 'GM Financial ', paid: false }
 ]
 
-angular.module("angryPay", [])
+angular
+  .module("angryPay", [])
+  .controller("billsCtrl", [ billController ])
+
+function billController () {
+  this.bills = billData
+}
